@@ -1,0 +1,102 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "plugins": [
+    "react",
+    "react-hooks"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2018
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "arrow-parens": [
+      2,
+      "always"
+    ],
+    "implicit-arrow-linebreak": [
+      "error",
+      "beside"
+    ],
+    "arrow-body-style": [
+      "warn",
+      "as-needed"
+    ],
+    "function-call-argument-newline": [
+      "error",
+      "consistent"
+    ],
+    "object-curly-spacing": [
+      2,
+      "always"
+    ],
+    "key-spacing": [
+      "error",
+      {
+        "align": {
+          "beforeColon": true,
+          "afterColon": true,
+          "on": "colon"
+        }
+      }
+    ],
+    "react/jsx-closing-bracket-location": [
+      1,
+      "tag-aligned"
+    ],
+    // NextJs does not require you to import React into each component.
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-curly-spacing": [
+      "warn",
+      {
+        "when": "always",
+        "children": true,
+        "spacing": {
+          // <MyComponent propA={{ a: 1 }} />
+          "objectLiterals": "never"
+        }
+      }
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "globals": {
+    "React": "writable"
+  }
+}
